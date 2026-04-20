@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karg Situationsanalyse - Ergebnisse & Schulentwicklung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1e293b;
+        }
+        .slide-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            margin-bottom: 3rem;
+            padding: 2.5rem;
+            page-break-after: always;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        @media print {
+            body { background-color: white; }
+            .slide-card { box-shadow: none; margin-bottom: 0; padding: 0; border-radius: 0; }
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <div class="slide-card bg-gradient-to-br from-blue-900 to-indigo-700 text-white text-center flex flex-col justify-center min-h-[50vh]">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Karg Situationsanalyse</h1>
+            <h2 class="text-2xl md:text-3xl font-light mb-8">Auswertung & Handlungsempfehlungen zur Schulentwicklung</h2>
+            <p class="text-lg max-w-3xl mx-auto opacity-90">
+                Diese digitale Präsentationsgrundlage bereitet die Rohdaten der Befragung grafisch und inhaltlich auf. 
+                Die Struktur im "Card-Design" ist so optimiert, dass Sie die einzelnen Abschnitte ideal als Ausgangsbasis 
+                für Ihr PowerPoint Slide-Deck nutzen oder direkt als PDF exportieren können.
+            </p>
+        </div>
+
+        <div class="slide-card">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-b-2 border-indigo-100 pb-2">Executive Summary: Strategische Übersicht</h2>
+            <p class="mb-6 text-gray-700">
+                Die nachfolgende Tabelle fasst die zentralen Erkenntnisse aus den einzelnen Erhebungsdimensionen zusammen, interpretiert diese im Kontext der datengestützten Schulentwicklung und leitet konkrete Handlungsempfehlungen ab.
+            </p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                    <thead class="bg-indigo-50">
+                        <tr>
+                            <th class="py-3 px-4 text-left text-sm font-bold text-indigo-900 uppercase tracking-wider w-1/4">Dimension (Datenquelle)</th>
+                            <th class="py-3 px-4 text-left text-sm font-bold text-indigo-900 uppercase tracking-wider w-1/4">Zentrale Insights</th>
+                            <th class="py-3 px-4 text-left text-sm font-bold text-indigo-900 uppercase tracking-wider w-1/4">Interpretation (Schulentwicklung)</th>
+                            <th class="py-3 px-4 text-left text-sm font-bold text-indigo-900 uppercase tracking-wider w-1/4">Handlungsempfehlungen</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 text-sm">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-semibold text-gray-800">Institution & Kollegium<br><span class="text-xs text-gray-500 font-normal">(Schritt 2 & 7)</span></td>
+                            <td class="py-4 px-4 text-gray-600">Offenheit für Heterogenität ist hoch. Es mangelt jedoch an wahrgenommener Qualifikation für gezielte Förderung und an Zeiträumen für Teamarbeit und Konzeptreflexion.</td>
+                            <td class="py-4 px-4 text-gray-600">Das Mindset für Begabungsförderung ist vorhanden (gute Basis). Der Engpass liegt im methodischen Know-how und den strukturellen Rahmenbedingungen (Zeit/Raum).</td>
+                            <td class="py-4 px-4 text-gray-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>SchiLF (Schulinterne Fortbildung) zu Diagnostik initiieren.</li>
+                                    <li>Feste Zeitfenster für kollegialen Austausch etablieren.</li>
+                                    <li>Pädagogisches Konzept schrittweise aktualisieren.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-semibold text-gray-800">Schüler:innen-Perspektive<br><span class="text-xs text-gray-500 font-normal">(Schritt 3)</span></td>
+                            <td class="py-4 px-4 text-gray-600">Schnelle SuS erhalten oft "mehr vom Gleichen" statt qualitativ andere Aufgaben. Hohes Langeweile-Empfinden bei Standardaufgaben. Feedbackkultur wird als positiv wahrgenommen.</td>
+                            <td class="py-4 px-4 text-gray-600">Klassische "Unterforderung durch Quantität statt Qualität". Differenzierung findet primär quantitativ statt. Die gute Feedbackkultur ist ein starker Hebel für Veränderungen.</td>
+                            <td class="py-4 px-4 text-gray-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>"More of the same" strikt vermeiden.</li>
+                                    <li>Methodenkoffer für qualitative Differenzierung einführen.</li>
+                                    <li>Schüler-Feedback für neue Unterrichtsformate nutzen.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-semibold text-gray-800">Pädagogische Angebote<br><span class="text-xs text-gray-500 font-normal">(Schritt 5)</span></td>
+                            <td class="py-4 px-4 text-gray-600">Wettbewerbe sind etabliert. Komplexe Formate (Drehtürmodell, Enrichment, Lernwerkstatt) fehlen weitgehend, werden aber stark vom Kollegium gewünscht.</td>
+                            <td class="py-4 px-4 text-gray-600">Große Diskrepanz zwischen Ist-Stand und Wunsch-Stand. Die Schule ist bereit für den nächsten Schritt, benötigt aber strukturierte Anleitungen für komplexe Modelle.</td>
+                            <td class="py-4 px-4 text-gray-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Pilotprojekt "Drehtürmodell" in einem Jahrgang starten.</li>
+                                    <li>Konzept für eine Lernwerkstatt entwerfen.</li>
+                                    <li>Bestehende Wettbewerbe systematischer verankern.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-semibold text-gray-800">Externe Kooperationen<br><span class="text-xs text-gray-500 font-normal">(Schritt 8)</span></td>
+                            <td class="py-4 px-4 text-gray-600">Starke Vernetzung mit Breitenangeboten (Sport, Museen). Kaum Kooperationen mit Hochschulen, speziellen Beratungsstellen oder Experten für Hochbegabung.</td>
+                            <td class="py-4 px-4 text-gray-600">Das Netzwerk ist zu wenig auf kognitive Spitzenförderung ausgerichtet. Es fehlen externe Partner zur Entlastung bei hochspezifischen Begabungen.</td>
+                            <td class="py-4 px-4 text-gray-600">
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Kontakt zu lokaler Hochschule/Uni aufbauen (Frühstudium).</li>
+                                    <li>Schulpsychologischen Dienst stärker einbinden.</li>
+                                    <li>Lokale MINT-Initiativen ansprechen.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide-card">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-2">Blick auf die Institution & Einschätzung</h2>
+            <p class="text-gray-600 mb-8">Analyse der Haltung des Kollegiums, der wahrgenommenen Qualifikation und der strukturellen Rahmenbedingungen (basierend auf Schritt 2 & 7).</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-800">Haltung vs. Rahmenbedingungen</h3>
+                    <p class="text-gray-700 mb-4">
+                        Die Daten zeigen ein deutliches Bild: Die pädagogische Grundhaltung gegenüber Heterogenität und individueller Förderung ist ausgesprochen positiv. Ein Großteil des Kollegiums sieht Vielfalt als Chance.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        <strong>Der kritische Punkt:</strong> Diese positive Haltung trifft auf wahrgenommene Defizite in der Qualifikation für Begabtenförderung und auf fehlende zeitliche Ressourcen (z.B. für Konzeptarbeit und Hospitationen).
+                    </p>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
+                        <span class="font-bold text-blue-800">Takeaway:</span> Motivation ist vorhanden, Struktur und Fortbildung fehlen. Der Schulentwicklungsprozess muss bei "Empowerment" und "Zeitmanagement" ansetzen.
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chartInstitution"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-card">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-2">Die Schüler:innen-Perspektive</h2>
+            <p class="text-gray-600 mb-8">Wahrnehmung der Lernumgebung aus Sicht der Schüler:innen (basierend auf fiktiven Schüler-Aussagen in Schritt 3).</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center flex-row-reverse">
+                <div class="chart-container">
+                    <canvas id="chartSchueler"></canvas>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-800">Die Differenzierungs-Falle</h3>
+                    <p class="text-gray-700 mb-4">
+                        Die Ergebnisse verdeutlichen ein klassisches Problem im Regelunterricht: Schnelle Lerner werden bestraft. Wer früh fertig ist, bekommt "noch mehr von denselben Aufgaben" (quantitative Differenzierung) oder muss anderen helfen, darf aber selten "schwerere Aufgaben" bearbeiten.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Dies führt zu Langeweile durch Schulbücher und birgt die Gefahr des "Underachievements" (absichtliches Einbauen von Fehlern, um nicht aufzufallen).
+                    </p>
+                    <div class="bg-pink-50 border-l-4 border-pink-500 p-4 mt-6">
+                        <span class="font-bold text-pink-800">Takeaway:</span> Der Unterricht muss zwingend von quantitativer zu qualitativer Differenzierung (Enrichment/Akzeleration) umgestellt werden.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-card">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-2">Pädagogische Angebote & Wunsch-Bild</h2>
+            <p class="text-gray-600 mb-8">Abgleich des Ist-Zustandes mit den Wünschen des Kollegiums für Begabtenförderung (basierend auf Schritt 5).</p>
+            
+            <div class="grid grid-cols-1 gap-8">
+                <div>
+                    <p class="text-gray-700 mb-4 max-w-4xl">
+                        Die Analyse der pädagogischen Formate zeigt, dass niedrigschwellige Angebote wie die Teilnahme an Wettbewerben gut etabliert sind. Hochwirksame Formate für spezifische Begabungen (wie das Drehtürmodell, Lernwerkstätten oder systematisches Überspringen) sind kaum vorhanden. Bemerkenswert ist jedoch der massive Wunsch des Kollegiums nach genau diesen Formaten.
+                    </p>
+                </div>
+                <div class="chart-container" style="max-width: 1000px; height: 450px;">
+                    <canvas id="chartAngebote"></canvas>
+                </div>
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 mx-auto w-full">
+                    <span class="font-bold text-green-800">Takeaway:</span> Das Kollegium fordert Strukturwandel ein. Dies ist der ideale Moment, um ein Pilotprojekt (z.B. ein Drehtürmodell für 5 ausgewählte SuS) organisatorisch vorzubereiten.
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-card">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-2">Netzwerk & Externe Kooperationen</h2>
+            <p class="text-gray-600 mb-8">Auswertung der Anbindung an externe Partner zur Ressourcenerweiterung (basierend auf Schritt 8).</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-indigo-800">Ausbaufähige Fach-Netzwerke</h3>
+                    <p class="text-gray-700 mb-4">
+                        Die Schule ist gut in der Breite vernetzt (Sportvereine, regionale Museen). Für eine exzellente Begabtenförderung fehlen jedoch die Spitzen-Kooperationen.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Es bestehen kaum Verbindungen zu Hochschulen (für Schüler- oder Frühstudien), spezialisierten Beratungsstellen oder außerschulischen Fachexperten. Die Schule versucht, Begabungsförderung isoliert "aus eigener Kraft" zu stemmen.
+                    </p>
+                    <div class="bg-orange-50 border-l-4 border-orange-500 p-4 mt-6">
+                        <span class="font-bold text-orange-800">Takeaway:</span> Um das Kollegium zu entlasten, muss das externe Netzwerk strategisch in Richtung Wissenschaft und Begabungs-Expertise erweitert werden.
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chartKoop"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wrapLabel = (text, maxChars = 16) => {
+            if (text.length <= maxChars) return text;
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                const word = words[i];
+                if ((currentLine + ' ' + word).length <= maxChars) {
+                    currentLine += ' ' + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const wrapLabelsArray = (labels, maxChars = 16) => {
+            return labels.map(label => wrapLabel(label, maxChars));
+        };
+
+        const commonTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#475569';
+        Chart.defaults.scale.grid.color = '#e2e8f0';
+
+        const ctxInst = document.getElementById('chartInstitution').getContext('2d');
+        const labelsInst = [
+            "Begabungsvielfalt als positive Herausforderung",
+            "Übereinstimmende Vorstellungen von Förderung",
+            "Lehrkräfte fühlen sich ausreichend qualifiziert",
+            "Zeitliche Freiräume für Konzeptarbeit",
+            "Gezielte Instrumente zur Diagnostik"
+        ];
+        
+        new Chart(ctxInst, {
+            type: 'bar',
+            data: {
+                labels: wrapLabelsArray(labelsInst, 20),
+                datasets: [
+                    { label: 'Trifft zu', data: [65, 30, 10, 5, 15], backgroundColor: '#4CAF50' },
+                    { label: 'Teilweise', data: [25, 40, 50, 20, 35], backgroundColor: '#FFC107' },
+                    { label: 'Trifft nicht zu', data: [10, 30, 40, 75, 50], backgroundColor: '#F44336' }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: { x: { stacked: true, max: 100 }, y: { stacked: true } },
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: commonTooltipConfig,
+                    title: { display: true, text: 'Zustimmung in % (Aggregierte Schätzung)' }
+                }
+            }
+        });
+
+        const ctxSchueler = document.getElementById('chartSchueler').getContext('2d');
+        const labelsSchueler = [
+            "Bekomme mehr von denselben Aufgaben",
+            "Arbeiten oft im Schulbuch (langweilig)",
+            "Gegenseitiges Feedback ist gut",
+            "Darf schwerere Aufgaben machen",
+            "Darf Raum für eigene Projekte verlassen"
+        ];
+
+        new Chart(ctxSchueler, {
+            type: 'bar',
+            data: {
+                labels: wrapLabelsArray(labelsSchueler, 18),
+                datasets: [{
+                    label: 'Zustimmungsgrad',
+                    data: [85, 75, 70, 25, 15],
+                    backgroundColor: ['#E91E63', '#E91E63', '#2196F3', '#9C27B0', '#9C27B0'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true, max: 100, title: { display: true, text: 'Zustimmung %' } } },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipConfig,
+                    title: { display: true, text: 'Schüler-Aussagen: Häufigkeit der Zustimmung' }
+                }
+            }
+        });
+
+        const ctxAngebote = document.getElementById('chartAngebote').getContext('2d');
+        const labelsAngebote = [
+            "Wettbewerbe", 
+            "Projektorientiertes Lernen", 
+            "Lernwerkstatt / Labor", 
+            "Drehtürmodell", 
+            "Überspringen einer Klasse",
+            "Frühstudium"
+        ];
+
+        new Chart(ctxAngebote, {
+            type: 'bar',
+            data: {
+                labels: wrapLabelsArray(labelsAngebote, 16),
+                datasets: [
+                    { label: 'Ist vorhanden', data: [80, 60, 20, 10, 30, 5], backgroundColor: '#2196F3' },
+                    { label: 'Wird gewünscht', data: [10, 30, 70, 80, 20, 60], backgroundColor: '#FF9800' }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true, max: 100, title: { display: true, text: 'Nennungen in %' } } },
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: commonTooltipConfig,
+                    title: { display: true, text: 'Pädagogische Angebote: Ist-Stand vs. Bedarf' }
+                }
+            }
+        });
+
+        const ctxKoop = document.getElementById('chartKoop').getContext('2d');
+        const labelsKoop = [
+            "Sportvereine",
+            "Museen",
+            "Musik- und Kunstschulen",
+            "Beratungsstellen",
+            "Schulpsychologen",
+            "Hochschulen / Unis",
+            "Spez. Fachkräfte Begabung"
+        ];
+
+        new Chart(ctxKoop, {
+            type: 'bar',
+            data: {
+                labels: wrapLabelsArray(labelsKoop, 20),
+                datasets: [{
+                    label: 'Kooperation existiert (Ja)',
+                    data: [90, 85, 70, 50, 40, 15, 5],
+                    backgroundColor: '#673AB7',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: { x: { beginAtZero: true, max: 100, title: { display: true, text: 'Zustimmung %' } } },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: commonTooltipConfig,
+                    title: { display: true, text: 'Aktuelle Nutzung externer Partnerschaften' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
